@@ -6,22 +6,38 @@
  * Authors:Tal Reznic
  */
 
+ @-webkit-keyframes arrowMove {
+     from { top: 0px; }
+     to { top: 10px; }
+ }
+
+ @-moz-keyframes arrowMove {
+     from { top: 0px; }
+     to { top: 10px; }
+ }
+
+ @keyframes arrowMove {
+     from { top: 0px; }
+     to { top: 10px; }
+ }
+
  header {
  	display: block;
- 	padding:0px calc(~'(100vw - 1200px) '/ 2);
  	position: relative;
  	min-height: 700px;
  }
 
 header div.logo {
  	display: block;
+ 	margin-left: auto;
+ 	margin-right: auto;
  	background-color: fade(@color_ac_brown,95%);
  	background-image: url(../images/logos.svg);
  	background-repeat: no-repeat;
  	background-position: center -100px;
  	background-size: 370px 200px;
  	height: 100px;
- 	width: 100%;
+ 	width: 1200px;
 }
 
 header article {
@@ -63,16 +79,67 @@ header article a.phone {
 }
 
 header article a.phone:hover {
-	background-color: fade(@color_ac_brown,85%);
+	background-color: @color_ac_blue;
+	color: @color_text;
 }
 
-header article a.phone img {
+header article a.phone:hover svg {
+	fill: @color_text;
+}
+
+header article a.phone svg {
 	display: inline-block;
 	vertical-align: middle;
 	padding-right: 10px;
 	padding-bottom: 5px;
 	width: 35px;
 	height: 35px;
+	fill: @color_ac_light_blue;
+	transition: all 0.3s 
+}
+
+header span {
+	position: absolute;
+	bottom: 150px;
+	left: 50%;
+	margin-left: -25px;
+}
+
+header span:before {
+	content: "";
+	position: absolute;
+	right: calc(~'(0% + 80px)');
+	top: 50%;
+	margin-top: -0.5px;
+	width: 500px;
+	height: 1px;
+	background-color: @color_text;
+}
+
+header span:after {
+	content: "";
+	position: absolute;
+	left: calc(~'(0% + 80px)');
+	top: 50%;
+	margin-top: -0.5px;
+	width: 500px;
+	height: 1px;
+	background-color: @color_text;
+}
+
+header span svg {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	fill: @color_text;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-animation: arrowMove 0.7s linear infinite alternate;
+	-moz-animation: arrowMove 0.7s linear infinite alternate;
+	animation: arrowMove 0.7s linear infinite alternate ;
 }
 
 header figure {
