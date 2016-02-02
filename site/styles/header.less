@@ -1,0 +1,99 @@
+/**
+ * Header Style Sheet
+ * Alfa-Re Site
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+ header {
+ 	display: block;
+ 	padding:0px calc(~'(100vw - 1200px) '/ 2);
+ 	position: relative;
+ 	min-height: 700px;
+ }
+
+header div.logo {
+ 	display: block;
+ 	background-color: fade(@color_ac_brown,95%);
+ 	background-image: url(../images/logos.svg);
+ 	background-repeat: no-repeat;
+ 	background-position: center -100px;
+ 	background-size: 370px 200px;
+ 	height: 100px;
+ 	width: 100%;
+}
+
+header article {
+	position: absolute;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	top: 150px;
+	left: 50%;
+	margin-left: -250px;
+	width: 500px;
+
+	background-color: fade(@color_ac_light_blue,90%);
+	text-align: center;
+}
+
+header article h1 {
+	margin: 0px;
+	padding-bottom: 20px;
+}
+
+header article h1 strong {
+	display: block;
+	font-weight: 400;
+	line-height: 1;
+}
+
+header article a.phone {
+	display: inline-block;
+	text-decoration: none;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 2em;
+	color: @color_ac_light_blue;
+	background-color: @color_text;
+	position: relative;
+	transition: all 0.3s;
+}
+
+header article a.phone:hover {
+	background-color: fade(@color_ac_brown,85%);
+}
+
+header article a.phone img {
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	width: 35px;
+	height: 35px;
+}
+
+header figure {
+ 	position: absolute;
+ 	top: 0px;
+ 	left: 50%;
+ 	width: 1200px;
+ 	height: 100%;
+ 	opacity: 0;
+ 	visibility: hidden;
+ 	z-index: -1;
+ 	transition: all 0.8s;
+
+ 	margin: 0px;
+ 	margin-left: -600px;
+ 	background-repeat: no-repeat;
+ 	background-position: center top;
+ 	background-size: auto 100%;
+}
+
+header figure.visible {
+ 	opacity: 1;
+ 	visibility: visible;
+}

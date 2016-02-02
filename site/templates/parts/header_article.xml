@@ -1,0 +1,14 @@
+<document>
+	<article>
+		<cms:markdown param="content" multilanguage="yes"/>
+		
+		<a
+			href="'tel:'.urlencode(Language::getText('phone'))"
+			cms:eval="href"
+			class="phone"
+			>
+			<cms:text constant="phone"/>
+			<img src="_BASEURL.'/site/images/phone.svg'"  alt="phone-icon" cms:eval="src"/>
+		</a>
+	</article>
+</document>

@@ -51,6 +51,12 @@ Site.is_mobile = function() {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	//create images slider
+	Site.images_slider = new PageControl('header', 'figure');
+	Site.images_slider
+		.setInterval(6000)
+		.setWrapAround(true);
 };
 
 

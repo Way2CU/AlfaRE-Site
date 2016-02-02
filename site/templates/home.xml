@@ -5,11 +5,40 @@
 	<html lang="$language" cms:eval="lang">
 		<head>
 			<title><cms:text constant="site_title"/></title>
+			<cms:collection include="page_control"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<h1>It works!</h1>
+			<header>
+				<div class="logo"></div>
+
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="header_article"
+					template="parts/header_article.xml"
+					/>
+
+				<cms:desktop>
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="header_slider"
+						template="parts/slider_images.xml"
+						/>
+				</cms:desktop>
+
+				<cms:mobile>
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="mobile_header_slider"
+						template="parts/slider_images.xml"
+						/>
+				</cms:mobile>
+
+			</header>
 		</body>
 	</html>
 </document>

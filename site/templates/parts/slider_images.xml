@@ -1,0 +1,5 @@
+<document>
+	<figure style="'background-image: url('.$params['image'].');'" cms:eval="style">
+		
+	</figure>
+</document>
