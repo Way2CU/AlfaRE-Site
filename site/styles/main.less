@@ -1,0 +1,65 @@
+/**
+ * Main Style Sheet
+ * callbox
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors: Tal Reznic
+ */
+
+  @font-face {
+ 	font-family: 'Open Sans Hebrew';
+ 	font-style: bold;
+ 	font-weight: 700;
+ 	src: url(../images/fonts/OpenSansHebrew-ExtraBold.ttf) format('ttf');
+ }
+
+
+ @font-face {
+ 	font-family: 'Open Sans Hebrew';
+ 	font-style: bold;
+ 	font-weight: 700;
+ 	src: url(../images/fonts/opensanshebrew-bold-webfont.woff) format('woff');
+ }
+
+  @font-face {
+ 	font-family: 'Open Sans Hebrew';
+ 	font-style: regular;
+ 	font-weight: 400;
+ 	src: url(../images/fonts/opensanshebrew-regular-webfont.woff) format('woff');
+ }
+
+@color_ac_light_blue: #2aacca;
+@color_ac_blue: #1e477a;
+@color_ac_brown: #4d4d4d;
+@color_ac_grey: #bdc3c7;
+@color_text: white;
+
+
+@import (css) "stock/header.css";
+@import (css) "stock/copyright.css";
+
+
+body {
+	background-color: white;
+	color: @color_text;
+	font-family: 'Open Sans Hebrew', sans-serif;
+	font-weight: 400;
+}
+
+input,
+select,
+textarea,
+button {
+	font-family: 'Open Sans Hebrew', sans-serif;
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: @color_text;
+	font-family: 'Open Sans Hebrew', sans-serif;
+	font-weight: 400;
+}
