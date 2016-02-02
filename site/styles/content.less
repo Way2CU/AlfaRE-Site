@@ -1,0 +1,205 @@
+/**
+ * Main Style Sheet
+ * Alfa-Re Site
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+section#about {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 1200px;
+	background-color: @color_text;
+}
+
+section#about h2 {
+	display: block;
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: @color_ac_light_blue;
+}
+
+section#about article {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: left;
+	width: calc(~'(66.7% - 30px)');
+	background-color: @color_text;
+	color: @color_ac_brown;
+}
+
+body.rtl section#about article {
+	text-align: right;
+}
+
+section#about article strong {
+	color: @color_ac_blue;
+}
+
+div#form_wrap {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: 10px;
+	width: calc(~'(33.3% - 42px)');
+	background-color: @color_text;
+	border: 1px solid @color_ac_grey;
+	position: relative
+}
+
+div#form_wrap p {
+	margin: 0px;
+	padding-bottom: 10px;
+	color: @color_ac_blue;
+	font-size: 1.8em;
+}
+
+div#form_wrap form {
+	display: block;	
+}
+
+div#form_wrap form label {
+	display: block;
+	margin-bottom: 15px;
+	position: relative;
+}
+
+div#form_wrap form label:before {
+	content: "";
+	position: absolute;
+	right: 15px;
+	top: -7px;
+	background-image: url(../images/icon-sprite.svg);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-size: 422px 32px;
+	width: 32px;
+	height: 32px;
+}
+
+div#form_wrap form label:nth-of-type(1):before {
+	background-position: 0px 0px;
+}
+
+div#form_wrap form label:nth-of-type(2):before {
+	background-position: -32px 0px;
+}
+
+div#form_wrap form label:nth-of-type(3):before {
+	background-position: -62px 0px;
+}
+
+div#form_wrap form label span {
+	display: block;
+	text-align: left;
+	padding-bottom: 5px;
+	padding-left: 50px;
+	color: @color_ac_grey;
+}
+
+body.rtl div#form_wrap form label span {
+	padding-left: 0px;
+	padding-right: 50px;
+	text-align: right;
+}
+
+div#form_wrap form label input {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	width: calc(~'(95% - 10px)');
+	border: 1px solid @color_ac_grey;
+	transition: all 0.3s;
+}
+
+div#form_wrap form label input:focus,
+div#form_wrap form label input:hover {
+	border: 1px solid @color_ac_light_blue;
+}
+
+div#form_wrap form div.controls {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+div#form_wrap form div.controls button {
+	display: inline-block;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 70px;
+	padding-right: 70px;
+	border: none;
+	border: 1px solid @color_text;
+	background-color: @color_ac_light_blue;
+	font-weight: 700;
+	color: @color_text;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+div#form_wrap form div.controls button:hover {
+	background-color: @color_ac_blue;
+}
+
+section#about div.feature {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	margin-left: 15px;
+	margin-right: 15px;
+	width: calc(~'(33.3% - 32px)');
+	min-height: 150px;
+	border: 1px solid @color_ac_grey;
+	color: @color_ac_brown;	
+}
+
+section#about div.feature h4{
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: lighten(@color_ac_grey,15%);
+	color: @color_ac_blue;
+}
+
+section#about div.feature ul {
+	margin: 0px;
+	padding: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	list-style-type: none;
+}
+
+section#about div.feature ul li {
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	width: 45%;
+}
+
+body.rtl section#about div.feature ul li {
+	text-align: right;
+}
+
+section#about div.feature ul li strong {
+	display: inline-block;
+	vertical-align: top;
+}
+
+

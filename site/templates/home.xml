@@ -49,6 +49,33 @@
 				</cms:mobile>
 
 			</header>
+
+			<section id="about">
+				<h2><cms:text constant="title_about"/></h2>
+
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="about_asset"
+					template="parts/article_asset.xml"
+					/>
+
+				<div id="form_wrap">
+					<p><cms:text constant="title_form"/></p>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact"
+						/>
+				</div>
+
+				<cms:module
+					name="articles"
+					action="show_list"
+					group="asset_information"
+					template="parts/article_information.xml"
+					/>
+			</section>
 		</body>
 	</html>
 </document>
