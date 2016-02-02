@@ -10,6 +10,7 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+			<cms:svg file="site-sprite.svg"/>
 			<header>
 				<div class="logo"></div>
 
@@ -19,6 +20,15 @@
 					text_id="header_article"
 					template="parts/header_article.xml"
 					/>
+
+				<span>
+					<svg>
+						<use
+							href="#arrow"
+							xlink:href="site/images/site-sprite.svg#arrow"
+							/>
+					</svg>
+				</span>	
 
 				<cms:desktop>
 					<cms:module
