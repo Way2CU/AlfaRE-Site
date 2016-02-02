@@ -8,7 +8,12 @@
 			class="phone"
 			>
 			<cms:text constant="phone"/>
-			<img src="_BASEURL.'/site/images/phone.svg'"  alt="phone-icon" cms:eval="src"/>
+			<svg>
+				<use
+					href="#phone"
+					xlink:href="site/images/site-sprite.svg#phone"
+					/>
+			</svg>
 		</a>
 	</article>
 </document>
