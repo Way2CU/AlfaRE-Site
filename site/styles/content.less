@@ -6,6 +6,7 @@
  * Authors:Tal Reznic
  */
 
+section#gallery,
 section#about {
 	display: block;
 	margin-left: auto;
@@ -13,6 +14,10 @@ section#about {
 	text-align: center;
 	width: 1200px;
 	background-color: @color_text;
+}
+
+section#gallery {
+	padding-top: 20px;
 }
 
 section#about h2 {
@@ -165,7 +170,7 @@ section#about div.feature {
 	margin-left: 15px;
 	margin-right: 15px;
 	width: calc(~'(33.3% - 32px)');
-	min-height: 150px;
+	min-height: 160px;
 	border: 1px solid @color_ac_grey;
 	color: @color_ac_brown;	
 }
@@ -181,9 +186,14 @@ section#about div.feature h4{
 section#about div.feature ul {
 	margin: 0px;
 	padding: 0px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 1em;
+	padding-bottom: 1em;
 	list-style-type: none;
+}
+
+section#about div.feature:nth-of-type(2) ul {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
 }
 
 section#about div.feature ul li {
@@ -201,5 +211,100 @@ section#about div.feature ul li strong {
 	display: inline-block;
 	vertical-align: top;
 }
+
+section#about div.feature:nth-of-type(3) ul li{
+	padding-right: 30px;
+	width: calc(~'(45% - 30px)');
+	position: relative;
+}
+
+section#about div.feature:nth-of-type(3) ul li:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+	left: 0px;
+	background-image: url(../images/check-box.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 20px 20px;
+	width: 20px;
+	height: 20px;
+}
+
+body.rtl section#about div.feature:nth-of-type(3) ul li:before {
+	right: 0px;
+	left: auto;
+}
+
+section#about div.feature p {
+	font-size: 2em;
+	color: @color_ac_blue;
+}
+
+section#gallery a {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: @color_text;
+	position: relative;
+}
+
+section#gallery a:hover span,
+section#gallery a:hover:before {
+	opacity: 1;
+}
+
+section#gallery a:before {
+	content:"" ;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+
+	background-color: fade(black, 50%);
+	color: @color_text;
+	opacity: 0;
+	transition: all 0.3s
+}
+
+section#gallery a span {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	margin-left: -75px;
+	height: 50px;
+	width: 150px;
+	font-size: 1.2em;
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+section#gallery a img {
+	display: block;
+	
+}
+
+footer > div {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1200px;
+	background-color: black;
+	text-align: center;
+}
+
+/**
+ * Copyright
+ */
+footer div.copyright {
+	display: inline-block;
+	color: @color_text;
+}
+
+footer div.copyright a {
+	color: white;
+}
+
 
 

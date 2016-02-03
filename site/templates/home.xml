@@ -6,6 +6,7 @@
 		<head>
 			<title><cms:text constant="site_title"/></title>
 			<cms:collection include="page_control"/>
+			<cms:collection include="animation_chain"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
@@ -76,6 +77,25 @@
 					template="parts/article_information.xml"
 					/>
 			</section>
+
+			<section id="gallery">
+				<cms:module
+					name="gallery"
+					action="show_image_list"
+					group="gallery"
+					template="parts/gallery_images.xml"
+					/>
+			</section>
+
+			<footer>
+				<div>
+					<cms:template file="stock/copyright.xml">
+						<param name="holder" value="copyright_holder"/>
+						<param name="text" value="copyright_text"/>
+						<param name="light" value=""/>
+					</cms:template>
+				</div>
+			</footer>
 		</body>
 	</html>
 </document>

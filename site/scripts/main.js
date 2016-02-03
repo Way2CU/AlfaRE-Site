@@ -57,6 +57,9 @@ Site.on_load = function() {
 	Site.images_slider
 		.setInterval(6000)
 		.setWrapAround(true);
+
+	// create gallery lightbox
+	Site.lightbox_gallery = new LightBox('section#gallery a', false, false, true);
 };
 
 
