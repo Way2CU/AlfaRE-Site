@@ -34,7 +34,7 @@ div#fixed_menu p {
 
 div#fixed_menu span.logo {
 	position: absolute;
-	right: 0px;
+	right: 10px;
 	top: 50%;
 	margin-top: -25px;
 	background-image: url(../images/logos.svg);
@@ -50,7 +50,7 @@ div#fixed_menu a.phone {
 	position: absolute;
 	top: 50%;
 	margin-top: -27px;
-	left: 0px;
+	left: 10px;
 	display: inline-block;
 	text-decoration: none;
 	padding-top: 7px;
@@ -263,6 +263,10 @@ section#about div.feature {
 	color: @color_ac_brown;	
 }
 
+body.ltr section#about div.feature {
+	min-height: 240px;
+}
+
 section#about div.feature h4{
 	margin: 0px;
 	padding-top: 10px;
@@ -291,6 +295,10 @@ section#about div.feature ul li {
 	width: 45%;
 }
 
+body.ltr section#about div.feature ul li {
+	width: 90%;
+}
+
 body.rtl section#about div.feature ul li {
 	text-align: right;
 }
@@ -303,6 +311,12 @@ section#about div.feature ul li strong {
 section#about div.feature:nth-of-type(3) ul li{
 	padding-right: 30px;
 	width: calc(~'(45% - 30px)');
+	position: relative;
+}
+
+body.ltr section#about div.feature:nth-of-type(3) ul li {
+	padding-left: 30px;
+	width: calc(~'(80% - 30px)');
 	position: relative;
 }
 
@@ -393,6 +407,3 @@ footer div.copyright {
 footer div.copyright a {
 	color: white;
 }
-
-
-
