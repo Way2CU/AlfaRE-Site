@@ -12,6 +12,24 @@
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<cms:svg file="site-sprite.svg"/>
+			<!-- Fixed menu -->
+			<div id="fixed_menu">
+				<span class="logo"></span>
+				<p><cms:text constant="title_fixed_form"/></p>
+				<a
+					href="'tel:'.urlencode(Language::getText('phone'))"
+					cms:eval="href"
+					class="phone"
+					>
+					<cms:text constant="phone"/>
+					<svg>
+						<use
+							href="#phone"
+							xlink:href="site/images/site-sprite.svg#phone"
+							/>
+					</svg>
+				</a>
+			</div>
 			<header>
 				<div class="logo"></div>
 
