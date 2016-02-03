@@ -1,0 +1,129 @@
+/**
+ * Header mobile Style Sheet
+ * Alfa-Re Site
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+  header {
+  	display: block;
+  	text-align: center;
+  	position: relative;
+
+  	background-image: url(../images/mobile-header-background.jpg);
+  	background-repeat: no-repeat;
+  	background-position: center top;
+  	background-size: 100% auto;
+  	min-height: 450px;
+  }
+
+ header div.logo {
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	background-color: fade(@color_ac_brown,95%);
+  	background-image: url(../images/logos.svg);
+  	background-repeat: no-repeat;
+  	background-position: center -50px;
+  	background-size: 185px 100px;
+  	height: 50px;
+  	width: 100%;
+ }
+
+ header article {
+ 	display: block;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	margin-top: 30px;
+
+ 	padding-top: 20px;
+ 	padding-bottom: 20px;
+ 	width: 300px;
+
+ 	background-color: fade(@color_ac_light_blue,90%);
+ 	text-align: center;
+ }
+
+ header article h1 {
+ 	margin: 0px;
+ 	font-size: 1.3em;
+ 	padding-bottom: 20px;
+ }
+
+ header article h1 strong {
+ 	display: block;
+ 	font-weight: 400;
+ 	line-height: 1;
+ }
+
+ header article a.phone {
+ 	direction: rtl;
+ 	display: inline-block;
+ 	text-decoration: none;
+ 	padding-top: 7px;
+ 	padding-bottom: 7px;
+ 	padding-left: 15px;
+ 	padding-right: 15px;
+ 	font-size: 1.5em;
+ 	color: @color_ac_light_blue;
+ 	background-color: @color_text;
+ 	position: relative;
+ 	transition: all 0.3s;
+ }
+
+ header article a.phone:hover {
+ 	background-color: @color_ac_blue;
+ 	color: @color_text;
+ }
+
+ header article a.phone:hover svg {
+ 	fill: @color_text;
+ }
+
+ header article a.phone svg {
+ 	display: inline-block;
+ 	vertical-align: middle;
+ 	padding-right: 10px;
+ 	padding-bottom: 5px;
+ 	width: 30px;
+ 	height: 30px;
+ 	fill: @color_ac_light_blue;
+ 	transition: all 0.3s 
+ }
+
+ header span {
+ 	position: absolute;
+ 	bottom: 30px;
+ 	left: 50%;
+ 	margin-left: -25px;
+ }
+
+ header span:before {
+ 	content: "";
+ 	position: absolute;
+ 	right: calc(~'(0% + 80px)');
+ 	top: 50%;
+ 	margin-top: -0.5px;
+ 	width: 100px;
+ 	height: 1px;
+ 	background-color: @color_text;
+ }
+
+ header span:after {
+ 	content: "";
+ 	position: absolute;
+ 	left: calc(~'(0% + 80px)');
+ 	top: 50%;
+ 	margin-top: -0.5px;
+ 	width: 100px;
+ 	height: 1px;
+ 	background-color: @color_text;
+ }
+
+ header span svg {
+ 	position: relative;
+ 	width: 50px;
+ 	height: 50px;
+ 	fill: @color_text;
+ }

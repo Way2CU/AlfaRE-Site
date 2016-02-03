@@ -13,35 +13,40 @@
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<cms:svg file="site-sprite.svg"/>
 			<!-- Fixed menu -->
-			<div id="fixed_menu">
-				<span class="logo"></span>
-				<div class="language">
-					<cms:module
-						name="language_menu"
-						action="print"
-						/>
-				</div>
-				<p><cms:text constant="title_fixed_form"/></p>
-				<a
-					href="'tel:'.urlencode(Language::getText('phone'))"
-					cms:eval="href"
-					class="phone"
-					>
-					<cms:text constant="phone"/>
-					<svg>
-						<use
-							href="#phone"
-							xlink:href="site/images/site-sprite.svg#phone"
+			<cms:desktop>
+				<div id="fixed_menu">
+					<span class="logo"></span>
+					<div class="language">
+						<cms:module
+							name="language_menu"
+							action="print"
 							/>
-					</svg>
-				</a>
-			</div>
+					</div>	
+					<p><cms:text constant="title_fixed_form"/></p>
+					<a
+						href="'tel:'.urlencode(Language::getText('phone'))"
+						cms:eval="href"
+						class="phone"
+						>
+						<cms:text constant="phone"/>
+						<svg>
+							<use
+								href="#phone"
+								xlink:href="site/images/site-sprite.svg#phone"
+								/>
+						</svg>
+					</a>
+				</div>
+			</cms:desktop>
 			<header>
+
 				<div class="logo">
-					<cms:module
-						name="language_menu"
-						action="print"
-						/>
+					<cms:desktop>
+						<cms:module
+							name="language_menu"
+							action="print"
+							/>
+					</cms:desktop>	
 				</div>
 
 				<cms:module
@@ -68,15 +73,6 @@
 						template="parts/slider_images.xml"
 						/>
 				</cms:desktop>
-
-				<cms:mobile>
-					<cms:module
-						name="gallery"
-						action="show_image_list"
-						group="mobile_header_slider"
-						template="parts/slider_images.xml"
-						/>
-				</cms:mobile>
 
 			</header>
 

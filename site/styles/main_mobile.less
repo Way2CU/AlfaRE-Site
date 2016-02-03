@@ -1,0 +1,92 @@
+/**
+ * Main  Mobile Style Sheet
+ * callbox
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors: Tal Reznic
+ */
+
+  @font-face {
+ 	font-family: 'Open Sans Hebrew';
+ 	font-style: bold;
+ 	font-weight: 700;
+ 	src: url(../images/fonts/OpenSansHebrew-ExtraBold.ttf) format('ttf');
+ }
+
+
+ @font-face {
+ 	font-family: 'Open Sans Hebrew';
+ 	font-style: bold;
+ 	font-weight: 700;
+ 	src: url(../images/fonts/opensanshebrew-bold-webfont.woff) format('woff');
+ }
+
+  @font-face {
+ 	font-family: 'Open Sans Hebrew';
+ 	font-style: regular;
+ 	font-weight: 400;
+ 	src: url(../images/fonts/opensanshebrew-regular-webfont.woff) format('woff');
+ }
+
+@color_ac_light_blue: #2aacca;
+@color_ac_blue: #1e477a;
+@color_ac_brown: #4d4d4d;
+@color_ac_grey: #bdc3c7;
+@color_text: white;
+
+@import "header_mobile.less";
+
+@import (css) "stock/header.css";
+@import (css) "stock/copyright.css";
+
+
+body {
+	background-color: white;
+	background-image: url(../images/texture-witewall.png);
+	background-repeat: repeat;
+	background-position: center center;
+	background-size: 400px 400px;
+	color: @color_text;
+	font-family: 'Open Sans Hebrew', sans-serif;
+	font-weight: 400;
+}
+
+body.ltr {
+	
+	font-weight: 300;
+}
+
+input,
+select,
+textarea,
+button {
+	font-family: 'Open Sans Hebrew', sans-serif;
+	font-weight: 400;
+}
+
+body.ltr input,
+body.ltr select,
+body.ltr textarea,
+body.ltr button {
+	
+	font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: @color_text;
+	font-family: 'Open Sans Hebrew', sans-serif;
+	font-weight: 400;
+}
+
+body.ltr h1,
+body.ltr h2,
+body.ltr h3,
+body.ltr h4,
+body.ltr h5 {
+	
+	font-weight: 300;
+}
