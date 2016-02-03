@@ -48,6 +48,15 @@
 							/>
 					</cms:desktop>	
 				</div>
+				
+				<cms:mobile>
+					<div class="language">
+						<cms:module
+							name="language_menu"
+							action="print"
+							/>
+					</div>
+				</cms:mobile>
 
 				<cms:module
 					name="articles"
