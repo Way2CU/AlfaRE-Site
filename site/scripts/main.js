@@ -50,43 +50,43 @@ Site.is_mobile = function() {
  * @param object trigger_element    jQuery object
  */
 function FloatingMenu(menu, trigger_element){
-    var self = this;
+	var self = this;
 
-    self.menu = menu;
-    self.position = trigger_element.offset().top;
-    self.active = false;
-      
-    /**
-     * Object initialization.
-     */
-    self._init = function() {
-        // connect signals
-        $(window).on('scroll', self.handle_scroll);
+	self.menu = menu;
+	self.position = trigger_element.offset().top;
+	self.active = false;
+	  
+	/**
+	 * Object initialization.
+	 */
+	self._init = function() {
+		// connect signals
+		$(window).on('scroll', self.handle_scroll);
 
-        // set initial state
-        self.handle_scroll(null);
-    };
-    
-    /**
-     * Handle window scroll.
-     *
-     * @param object event
-     */
-    self.handle_scroll = function(event) {
-        var over_position = $(window).scrollTop() >= self.position;
-        
-        if (over_position && !self.active) {
-            self.menu.addClass('active');
-            self.active = true;
+		// set initial state
+		self.handle_scroll(null);
+	};
+	
+	/**
+	 * Handle window scroll.
+	 *
+	 * @param object event
+	 */
+	self.handle_scroll = function(event) {
+		var over_position = $(window).scrollTop() >= self.position;
+		
+		if (over_position && !self.active) {
+			self.menu.addClass('active');
+			self.active = true;
 
-        } else if (!over_position && self.active) {
-            self.menu.removeClass('active');
-            self.active = false;
-        }
-    };
+		} else if (!over_position && self.active) {
+			self.menu.removeClass('active');
+			self.active = false;
+		}
+	};
 
-    // finalize object
-    self._init();
+	// finalize object
+	self._init();
 }
 
 /**
@@ -103,10 +103,12 @@ Site.on_load = function() {
 		.setWrapAround(true);
 
 	// create gallery lightbox
-	Site.lightbox_gallery = new LightBox('section#gallery a', false, false, true);
+	if (!Site.is_mobile()) {
+		Site.lightbox_gallery = new LightBox('section#gallery a', false, false, true);
+	}
 
-            //  create floating menu object
-            Site.fixed_menu = new FloatingMenu($('div#fixed_menu'), $('header article a'));
+	//  create floating menu object
+	Site.fixed_menu = new FloatingMenu($('div#fixed_menu'), $('header article a'));
 };
 
 
